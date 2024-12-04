@@ -23,9 +23,8 @@
     "./dist"
   ],
   "scripts": {
-    "prepare": "npm run build-ts && npm run build",
-    "build-ts": "npx tsc -p ./server/tsconfig.json && npx tsc -p ./admin/tsconfig.json",
-    "build": "./node_modules/.bin/strapi-plugin build",
+    "prepare": "npm run build",
+    "build": "tsc && ./node_modules/.bin/strapi-plugin build",
     "watch": "./node_modules/.bin/strapi-plugin watch",
     "watch:link": "./node_modules/.bin/strapi-plugin watch:link",
     "verify": "./node_modules/.bin/strapi-plugin verify",
