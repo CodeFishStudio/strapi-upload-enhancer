@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc && ./node_modules/.bin/strapi-plugin build",
+    "build": "./node_modules/.bin/strapi-plugin build",
     "watch": "./node_modules/.bin/strapi-plugin watch",
     "watch:link": "./node_modules/.bin/strapi-plugin watch:link",
     "verify": "./node_modules/.bin/strapi-plugin verify",
