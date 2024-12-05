@@ -1,7 +1,7 @@
 import type { Core } from '@strapi/strapi';
 import Vibrant from 'node-vibrant';
 
-const getDominantColour = async (
+const getDominantColor = async (
   imageBuffer: Buffer | null,
   strapi: Core.Strapi
 ): Promise<string | null> => {
@@ -21,11 +21,11 @@ const getDominantColour = async (
     return hex.length === 1 ? '0' + hex : hex;
   };
 
-  const dominantColour: string = '#' + toHex(r) + toHex(g) + toHex(b);
+  const dominantColor: string = '#' + toHex(r) + toHex(g) + toHex(b);
 
-  strapi.log.info(`Got dominant colour: ${dominantColour}`);
+  strapi.log.info(`Got dominant color: ${dominantColor}`);
 
-  return dominantColour;
+  return dominantColor;
 };
 
-export default getDominantColour;
+export default getDominantColor;

@@ -7,7 +7,7 @@ const register = ({ strapi }: { strapi: Core.Strapi }) => {
     type: 'text',
   };
   // @ts-ignore
-  strapi.plugin('upload').contentTypes.file.attributes.dominantColour = {
+  strapi.plugin('upload').contentTypes.file.attributes.dominantColor = {
     type: 'text',
   };
 };

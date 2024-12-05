@@ -1,7 +1,7 @@
 import type { Core } from '@strapi/strapi';
 import fetchImageFromS3 from './fetchS3Image';
 import getPlaceholder from './placeholder';
-import getDominantColour from './dominantColour';
+import getDominantColor from './dominantColor';
 
 const processImage = async (
   imageBuffer: Buffer | undefined,
@@ -24,7 +24,7 @@ const processImage = async (
   }
 
   data.placeholder = await getPlaceholder(imageBuffer, strapi);
-  data.dominantColour = await getDominantColour(imageBuffer, strapi);
+  data.dominantColor = await getDominantColor(imageBuffer, strapi);
 };
 
 export default processImage;
