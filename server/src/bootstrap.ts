@@ -3,8 +3,13 @@ import fs from 'fs/promises';
 import path from 'path';
 import processImage from './services/processImage';
 
-const handleImageUpload = async (event: any): Promise<void> => {
+const handleFileUpload = async (event: any): Promise<void> => {
     const { data } = event.params;
+
+    const isImageFile = data.mime.startsWith('image/');
+
+    if (!isImageFile) return;
+
     const s3Url: string | undefined = data.url;
     let imageBuffer: Buffer | undefined;
 
@@ -60,8 +65,8 @@ const bootstrap = ({ strapi }: { strapi: Core.Strapi }) => {
 
     strapi.db.lifecycles.subscribe({
         models: ['plugin::upload.file'],
-        beforeCreate: handleImageUpload,
-        beforeUpdate: handleImageUpload,
+        beforeCreate: handleFileUpload,
+        beforeUpdate: handleFileUpload,
     });
 };
 
