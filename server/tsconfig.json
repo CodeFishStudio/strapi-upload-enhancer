@@ -1,9 +1,9 @@
 {
-  "extends": "@strapi/typescript-utils/tsconfigs/server",
-  "include": ["./src"],
-  "compilerOptions": {
-    "rootDir": "../",
-    "baseUrl": ".",
-    "strictNullChecks": true,
-  }
+    "extends": "@strapi/typescript-utils/tsconfigs/server",
+    "include": ["./src"],
+    "compilerOptions": {
+        "rootDir": "../",
+        "baseUrl": ".",
+        "strictNullChecks": true
+    }
 }

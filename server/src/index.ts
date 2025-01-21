@@ -1,5 +1,3 @@
-import type { Core } from '@strapi/strapi';
-
 /**
  * Application methods
  */
@@ -12,7 +10,7 @@ import config from './config';
 import register from './register';
 
 export default {
-  register,
-  bootstrap,
-  config,
+    register,
+    bootstrap,
+    config,
 };
