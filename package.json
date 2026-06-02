@@ -1,20 +1,11 @@
 {
+    "name": "strapi-upload-enhancer",
+    "description": "Allows middleware to intercept media uploads",
+    "license": "MIT",
+    "author": "Talha Ismail <talha.ismail@codefishstudio.com>",
     "version": "0.0.3",
     "keywords": [],
     "type": "commonjs",
-    "exports": {
-        "./package.json": "./package.json",
-        "./strapi-server": {
-            "types": "./dist/server/src/index.d.ts",
-            "source": "./server/src/index.ts",
-            "import": "./dist/server/index.mjs",
-            "require": "./dist/server/index.js",
-            "default": "./dist/server/index.js"
-        }
-    },
-    "files": [
-        "./dist"
-    ],
     "scripts": {
         "prepare": "npm run build",
         "build": "./node_modules/.bin/strapi-plugin build",
@@ -28,9 +19,9 @@
         "blurhash": "^2.0.5",
         "node-vibrant": "^3.2.1-alpha.1",
         "plaiceholder": "^2.3.0",
-        "@strapi/sdk-plugin": "^5.2.7",
-        "@strapi/strapi": "^5.4.2",
-        "@strapi/typescript-utils": "^5.4.2",
+        "@strapi/sdk-plugin": "^5.4",
+        "@strapi/strapi": "^5.47",
+        "@strapi/typescript-utils": "^5.47",
         "typescript": "^5.7.2"
     },
     "devDependencies": {
@@ -41,21 +32,30 @@
         "@strapi/typescript-utils": "^5.4.2"
     },
     "peerDependencies": {
-        "@strapi/sdk-plugin": "^5.2.7",
+        "@strapi/sdk-plugin": "^5.4.0",
         "@strapi/strapi": "^5.4.2",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-router-dom": "^6.0.0",
         "styled-components": "^6.1.13"
     },
+    "exports": {
+        "./package.json": "./package.json",
+        "./strapi-server": {
+            "types": "./dist/server/src/index.d.ts",
+            "source": "./server/src/index.ts",
+            "import": "./dist/server/index.mjs",
+            "require": "./dist/server/index.js",
+            "default": "./dist/server/index.js"
+        }
+    },
+    "files": [
+        "./dist"
+    ],
     "strapi": {
         "kind": "plugin",
         "name": "strapi-upload-enhancer",
         "displayName": "Upload Enhancer",
         "description": "Allows middleware to intercept media uploads"
-    },
-    "name": "strapi-upload-enhancer",
-    "description": "Allows middleware to intercept media uploads",
-    "license": "MIT",
-    "author": "Talha Ismail <talha.ismail@codefishstudio.com>"
+    }
 }
