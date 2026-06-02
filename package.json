@@ -3,7 +3,7 @@
     "description": "Allows middleware to intercept media uploads",
     "license": "MIT",
     "author": "Talha Ismail <talha.ismail@codefishstudio.com>",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "keywords": [],
     "type": "commonjs",
     "scripts": {
