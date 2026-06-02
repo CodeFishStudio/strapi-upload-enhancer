@@ -6,7 +6,9 @@ import processImage from './services/processImage';
 const handleFileUpload = async (event: any): Promise<void> => {
     const { data } = event.params;
 
-    const isImageFile = data.mime.startsWith('image/');
+    // Metadata-only updates (e.g. alt text) omit mime; optional chaining skips
+    // processing safely.
+    const isImageFile = data.mime?.startsWith('image/');
 
     if (!isImageFile) return;
 
