@@ -3,7 +3,7 @@
     "description": "Allows middleware to intercept media uploads",
     "license": "MIT",
     "author": "Talha Ismail <talha.ismail@codefishstudio.com>",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "keywords": [],
     "type": "commonjs",
     "scripts": {
@@ -18,18 +18,16 @@
         "axios": "^1.7.8",
         "blurhash": "^2.0.5",
         "node-vibrant": "^3.2.1-alpha.1",
-        "plaiceholder": "^2.3.0",
+        "plaiceholder": "^2.3.0"
+    },
+    "devDependencies": {
         "@strapi/sdk-plugin": "^5.4",
         "@strapi/strapi": "^5.47",
         "@strapi/typescript-utils": "^5.47",
-        "typescript": "^5.7.2"
-    },
-    "devDependencies": {
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
         "prettier": "^3.4.1",
-        "typescript": "^5.7.2",
-        "@strapi/typescript-utils": "^5.4.2"
+        "typescript": "^5.7.2"
     },
     "peerDependencies": {
         "@strapi/sdk-plugin": "^5.4",
@@ -37,6 +35,7 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-router-dom": "^6.0.0",
+        "sharp": "^0.33.0",
         "styled-components": "^6.1.13"
     },
     "exports": {
